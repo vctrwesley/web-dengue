@@ -34,8 +34,8 @@ Se você tiver alguma dúvida ou sugestão de melhoria, sinta-se à vontade para
     </a>
     </td>
     <td align="center">
-    <a href="https://github.com/exemplo">
-    <img style="border-radius: 50%;" src="link-para-avatar" width="100px;" alt=""/><br /><sub><b>João Victor</b></sub>
+    <a href="https://github.com/JVictor011">
+    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/91631521?s=400&u=03f358b485245072832e8fed915b5968746ae4c1&v=4" width="100px;" alt=""/><br /><sub><b>João Victor</b></sub>
     </a><br />
     <a href="https://www.linkedin.com/in/joao-victor-coding/" title="Linkedin">
     <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
