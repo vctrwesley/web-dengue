@@ -13,7 +13,7 @@ const routes: Routes = [
       children: [
         { path: 'page-home', component: PageHomeComponent },
         { path: 'page-sobre', component: PageSobreComponent },
-        { path: 'page-intervencao', component: PagePrevencaoComponent },
+        { path: 'page-prevencao', component: PagePrevencaoComponent },
         { path: 'page-contato', component: PageContatoComponent },
       ],
     },
