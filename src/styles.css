@@ -1,0 +1,43 @@
+body {
+    background-color: #e8e9e4;
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  
+  .mat-typography {
+    overflow: visible !important;
+  }
+
+  :root {
+    --color-primary: #1A2C38;
+    --color-secondary: #3A778A;
+    --color-red-primary: #9E1414;
+    --color-orange-primary: #FF761E;
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-dark-grey: #3F4141;
+  }
+
+   /* Custom Scrollbar */
+   ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-light);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+  }
