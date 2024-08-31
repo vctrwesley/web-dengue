@@ -44,7 +44,6 @@
 
 .menu-container a:hover {
   color: var(--color-primary) ;
-  font-weight: 700;
 }
 
 .menu-container ul li:last-child {
