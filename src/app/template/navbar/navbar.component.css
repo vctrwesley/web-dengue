@@ -27,6 +27,8 @@
 .menu-container {
   width: auto;
   margin-right: 4rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .menu-container ul {
@@ -42,12 +44,12 @@
   font-size: 1.125rem;
 }
 
-.menu-container a:hover {
-  color: var(--color-primary) ;
-}
-
 .menu-container ul li:last-child {
   margin-right: 0;
+}
+
+.nav-item a:hover {
+  color: var(--color-primary);
 }
 
 .nav-link {
@@ -58,6 +60,67 @@
 
 .navbar-toggler {
   display: none;
+  background: none;
+}
+
+.button-nav{
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 1rem 2.5rem;
+  border-radius: 24px;
+  text-decoration: none;
+}
+
+.button-nav:hover {
+  background: #233c4d;
+}
+
+/* mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mobile-menu ul li {
+  margin: 1rem 0;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.mobile-menu .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 720px) {

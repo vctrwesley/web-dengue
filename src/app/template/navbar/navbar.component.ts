@@ -10,10 +10,16 @@ export class NavbarComponent {
 
     @ViewChild('menu') menu!: ElementRef;
     private offcanvas?: any;
+
+    isMobileMenuOpen = false;
   
     constructor(private router: Router) {}
   
-    openMenu() {}  
+    openMenu() {}
+    
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    }
   
     navigateTo(route: string) {
       if (this.offcanvas) {
