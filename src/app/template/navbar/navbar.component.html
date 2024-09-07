@@ -4,8 +4,8 @@
         <a class="logo navbar-brand" href="">
           <img src="./assets/icons/logo-webD.svg" alt="Logo" />
         </a>
-        <button class="navbar-toggler" type="button" (click)="openMenu()">
-          <img src="" alt="menu lateral do mobile" width="25rem"/>
+        <button class="navbar-toggler" type="button" (click)="toggleMobileMenu()">
+          <img src="./assets/icons/iconmenu.svg" alt="menu lateral do mobile" width="25rem"/>
         </button>
       </div>
 
@@ -24,6 +24,28 @@
             <a class="nav-link" routerLink="/usuario/page-contato">Contato</a>
           </li>
         </ul>
+        <a class="button-nav" routerLink="/usuario/page-contato">Agências</a>
       </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+      <button class="close-btn" (click)="toggleMobileMenu()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/page-home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/page-sobre">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/page-prevencao">Prevenção</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/page-contato">Contato</a>
+        </li>
+      </ul>
+    </div>
   </header>
