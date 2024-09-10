@@ -10,6 +10,7 @@
   justify-content: center;
   text-align: center;
   margin-top: 5rem;
+  gap: 4rem;
 }
 
 .img-banner img {
@@ -44,13 +45,59 @@
   text-align: center;
 }
 
+.text-banner {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-banner h1 {
+  font-size: 100px;
+  font-weight: 700;
+  color: var(--color-light);
+  line-height: 0.7;
+  text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
+  margin-bottom: 0;
+}
+
+.text-banner h1 span{
+  color: var(--color-dark);
+}
+
+.text-banner p {
+  font-size: 16px;
+  color: var(--color-light);
+  font-weight: 100;
+  text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
+  margin: 32px;
+  margin-top: 48px;
+}
+
+.text-banner .hastag-web{
+  color: var(--color-dark);
+  text-shadow: none;
+}
+
 @media screen and (max-width: 768px) {
   .banner {
-    height: 60vh;
+    height: 70vh;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .img-banner img {
     width: 50%;
+  }
+
+  .text-banner h1 {
+    font-size: 60px;
+    margin-top: 0;
+  }
+
+  .text-banner p {
+    margin: 16px;
+    margin-top: 32px;
+    font-size: 14px;
   }
 
   .section-02 {
