@@ -66,7 +66,7 @@
 .text-banner p {
   font-size: 16px;
   color: var(--color-light);
-  font-weight: 100;
+  font-weight: 200;
   text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
   margin: 32px;
   margin-top: 48px;
@@ -79,7 +79,7 @@
 
 @media screen and (max-width: 768px) {
   .banner {
-    height: 70vh;
+    height: 80vh;
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -98,6 +98,7 @@
     margin: 16px;
     margin-top: 32px;
     font-size: 14px;
+    font-weight: 400;
   }
 
   .section-02 {
