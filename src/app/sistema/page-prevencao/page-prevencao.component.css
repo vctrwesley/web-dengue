@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  color: #3f4141;
+}
+
+.video-section {
+  width: 100%;
+  max-width: 560px; /* Define a largura máxima para ambos */
+  margin: 0 auto; /* Centraliza os elementos */
+  padding: 20px;
+}
+.hero p {
+  text-align: justify;
+}
+
+.video-section iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.prevention-tips {
+  background-color: #ff7f32;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.educational-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #3a778a;
+}
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.iframe-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.text-content {
+  width: 100%;
+  text-align: center;
+  color: #e8e8e8;
+}
+
+.text-content h2 {
+  margin-top: 0;
+}
+
+.text-content p {
+  margin-top: 10px;
+}
+
+.tutorials {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.tutorials h2 {
+  text-align: center;
+}
+
+.tutorials-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #ededed;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #0077a3;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 560px;
+  max-height: 315px;
+}
