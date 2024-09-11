@@ -64,9 +64,9 @@
 }
 
 .text-banner p {
-  font-size: 16px;
+  font-size: 20px;
   color: var(--color-light);
-  font-weight: 200;
+  font-weight: 500;
   text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
   margin: 32px;
   margin-top: 48px;
@@ -98,7 +98,6 @@
     margin: 16px;
     margin-top: 32px;
     font-size: 14px;
-    font-weight: 400;
   }
 
   .section-02 {
