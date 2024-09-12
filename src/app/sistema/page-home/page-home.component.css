@@ -19,13 +19,37 @@
   box-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
 }
 
-.section-02 {
-  background: transparent;
+.text-banner {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 60vh;
+  flex-direction: column;
+}
+
+.text-banner h1 {
+  font-size: 100px;
+  font-weight: 700;
+  color: var(--color-light);
+  line-height: 0.7;
+  text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
+  margin-bottom: 0;
+}
+
+.text-banner h1 span{
+  color: var(--color-text-dark);
+}
+
+.text-banner p {
+  font-size: 20px;
+  color: var(--color-light);
+  font-weight: 500;
+  text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
+  margin: 32px;
+  margin-top: 48px;
+}
+
+.text-banner .hastag-web{
+  color: var(--color-primary);
+  text-shadow: none;
+  font-weight: 600;
 }
 
 .banner-content-slogan {
@@ -76,36 +100,31 @@
   margin: 32px;
 }
 
-.text-banner {
+.section-02 {
+  background: transparent;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
 }
 
-.text-banner h1 {
-  font-size: 100px;
-  font-weight: 700;
-  color: var(--color-light);
-  line-height: 0.7;
-  text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
-  margin-bottom: 0;
+.section-03 {
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
 }
 
-.text-banner h1 span{
-  color: var(--color-dark);
-}
-
-.text-banner p {
-  font-size: 20px;
-  color: var(--color-light);
-  font-weight: 500;
-  text-shadow: -10px 0 20px rgba(0, 0, 0, 0.309);
-  margin: 32px;
-  margin-top: 48px;
-}
-
-.text-banner .hastag-web{
-  color: var(--color-dark);
-  text-shadow: none;
+.section-04 {
+  background: var(--bg-color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
 }
 
 @media screen and (max-width: 768px) {

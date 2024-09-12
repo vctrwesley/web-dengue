@@ -1,7 +1,7 @@
 body {
-    background-color: #e8e9e4;
+    background: var(--color-white-light);
     font-family: "Inter", sans-serif;
-    color: #000000;
+    color: var(--color-text-dark);
     margin: 0;
     padding: 0;
   }
@@ -23,6 +23,9 @@ body {
     --color-dark: #000000;
     --color-dark-grey: #3F4141;
     --bg-color-blueLight: #CAD9DE;
+    --bg-color-blue: #6091A0;
+    --color-text-dark: #1E1E1E;
+    --color-white-light: #E8E8E8;
   }
 
    /* Custom Scrollbar */
