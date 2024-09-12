@@ -28,21 +28,52 @@
   min-height: 60vh;
 }
 
-.banner-content {
-  width: 60%;
-}
-
-.banner-content .slogan h1 {
-  color: #121f16;
-  font-size: 40x;
+.banner-content-slogan {
+  width: 100%;
+  height: 35vh;
+  background-image: url('/assets/images/slogan-01.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .slogan {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+}
+
+.slogan h2 {
+  color: var(--color-light);
+  font-size: 48px;
+  text-align: left;
+  margin: 32px;
+}
+
+.banner-content-slogan-02 {
+  width: 100%;
+  height: 35vh;
+  background-image: url('/assets/images/slogan-02.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slogan-02 {
+  display: flex;
+  text-align: center;
+}
+
+.slogan-02 h2 {
+  color: var(--color-light);
+  font-size: 48px;
+  text-align: right;
+  margin: 32px;
 }
 
 .text-banner {
@@ -108,7 +139,7 @@
     width: 80%;
   }
 
-  .banner-content .slogan h1 {
+  .banner-content .slogan h2 {
     font-size: 32;
   }
 }
