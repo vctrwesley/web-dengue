@@ -120,12 +120,61 @@
 
 .section-04 {
   background: var(--bg-color-blue);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 60vh;
+  gap: 24px; 
 }
+
+.img-inf-agente{
+ margin: 40px;
+}
+
+.img-inf-agente img{
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-inf-agente{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 80px;
+}
+
+.text-inf-agente h3{
+  color: var(--color-primary);
+  font-size: 36px;
+  text-align: left;
+  margin: 24px;
+  margin-bottom: 0;
+}
+
+.text-inf-agente p{
+  color: var(--color-light);
+  font-size: 18px;
+  margin: 24px;
+  text-align: justify;
+}
+
+.button{
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 1rem 2.5rem;
+  border-radius: 24px;
+  text-decoration: none;
+  margin: 24px;
+}
+
+.button:hover {
+  background: #233c4d;
+}
+
 
 @media screen and (max-width: 768px) {
   .banner {
@@ -160,5 +209,9 @@
 
   .banner-content .slogan h2 {
     font-size: 32;
+  }
+
+  .section-04 {
+    grid-template-columns: 1fr; /* Define uma coluna em telas menores */
   }
 }
