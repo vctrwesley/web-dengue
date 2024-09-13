@@ -274,6 +274,6 @@
   }
 
   .section-04 {
-    grid-template-columns: 1fr; /* Define uma coluna em telas menores */
+    grid-template-columns: 1fr;
   }
 }
