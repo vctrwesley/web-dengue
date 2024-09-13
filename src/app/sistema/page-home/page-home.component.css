@@ -33,7 +33,7 @@
   margin-bottom: 0;
 }
 
-.text-banner h1 span{
+.text-banner h1 span {
   color: var(--color-text-dark);
 }
 
@@ -46,7 +46,7 @@
   margin-top: 48px;
 }
 
-.text-banner .hastag-web{
+.text-banner .hastag-web {
   color: var(--color-primary);
   text-shadow: none;
   font-weight: 600;
@@ -112,9 +112,9 @@
 .banner-content-slogan {
   width: 100%;
   height: 35vh;
-  background-image: url('/assets/images/slogan-01.png');
+  background-image: url("/assets/images/slogan-01.png");
   background-size: cover;
-  background-position: center; 
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -136,9 +136,9 @@
 .banner-content-slogan-02 {
   width: 100%;
   height: 35vh;
-  background-image: url('/assets/images/slogan-02.png');
+  background-image: url("/assets/images/slogan-02.png");
   background-size: cover;
-  background-position: center; 
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -183,20 +183,20 @@
   justify-content: center;
   text-align: center;
   min-height: 80vh;
-  gap: 24px; 
+  gap: 24px;
 }
 
-.img-inf-agente{
- margin: 40px;
+.img-inf-agente {
+  margin: 40px;
 }
 
-.img-inf-agente img{
+.img-inf-agente img {
   width: 80%;
   height: auto;
   border-radius: 8px;
 }
 
-.text-inf-agente{
+.text-inf-agente {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -204,7 +204,7 @@
   margin: 80px;
 }
 
-.text-inf-agente h3{
+.text-inf-agente h3 {
   color: var(--color-primary);
   font-size: 36px;
   text-align: left;
@@ -212,14 +212,14 @@
   margin-bottom: 0;
 }
 
-.text-inf-agente p{
+.text-inf-agente p {
   color: var(--color-light);
   font-size: 18px;
   margin: 24px;
   text-align: justify;
 }
 
-.button{
+.button {
   background: var(--color-primary);
   color: var(--color-light);
   padding: 1rem 2.5rem;
@@ -231,7 +231,6 @@
 .button:hover {
   background: #233c4d;
 }
-
 
 @media screen and (max-width: 768px) {
   .banner {
@@ -264,8 +263,14 @@
     width: 80%;
   }
 
-  .banner-content .slogan h2 {
-    font-size: 32;
+  .slogan h2 {
+    font-size: 30px;
+    margin: 24px;
+  }
+
+  .slogan-02 h2 {
+    font-size: 30px;
+    margin: 24px;
   }
 
   .section-04 {
