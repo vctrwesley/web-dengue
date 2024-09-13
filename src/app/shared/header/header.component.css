@@ -22,3 +22,14 @@
     text-align: center;
     margin: 40px;
   }
+
+  @media screen and (max-width: 768px) {
+    .banner-content-title {
+      height: 15vh;
+    }
+
+    .title h2 {
+      font-size: 40px;
+    }
+    
+  }
