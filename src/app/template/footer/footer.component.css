@@ -1,128 +1,153 @@
 .footer {
-    display: flex;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 270px;
-    margin: auto;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--bg-color-blueLight);
+  display: flex;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 270px;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-color-blueLight);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1600px;
+  align-items: center;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-menu {
+  display: flex;
+  background-color: transparent;
+  margin-bottom: 50px;
+  margin-top: 0.875rem;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  margin-right: 3rem;
+  margin-left: 5rem;
+}
+
+.footer-logo img {
+  width: 120px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links h2 {
+  color: var(--color-primary);
+  font-size: 22px;
+  margin: 0;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.footer-links a {
+  color: var(--color-dark);
+  font-size: 16px;
+  text-decoration: none;
+
+}
+
+.footer-links img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+
+}
+
+.footer-icons img {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.footer-copyright {
+  background: var(--color-primary);
+  font-size: 14px;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-copyright span {
+  margin-left: 3rem;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    height: 450px;
   }
-  
+
   .footer-container {
-    width: 100%;
-    max-width: 1600px;
-    align-items: center;
-    flex-direction: row;
-    margin: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    height: 400px;
+    margin-bottom: 0;
+    margin-top: 50px;
   }
-  
-  .footer-menu {
-    display: flex;
-    background-color: transparent;
-    margin-bottom: 50px;
-    margin-top: 0.875rem;
-    font-size: 14px;
-    justify-content: space-between;
-  }
-  
-  .footer-logo {
-    margin-right: 3rem;
-    margin-left: 6rem;
-  }
-  
-  .footer-logo img {
-    width: 120px;
-  }
-  
+
   .links-container {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
   }
 
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-  }
-  
-  .title {
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer-links h2 {
-    color: var(--color-primary);
-    font-size: 22px;
-    margin: 0;
-  }
-  
-  .footer-links ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0; 
-    margin: 0;
-  }
-  
-  .footer-links li {
-    list-style: none;
-    margin-top: 10px;
-    padding: 0;
-  }
-
-  .footer-links a {
-    color: var(--color-dark);
-    font-size: 16px;
-    text-decoration: none;
-    
-  }
-  
-  .footer-links img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .footer-icons {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    
-  }
-
-  .footer-icons img {
-    width: 35px;
-    margin-right: 10px;
+  .footer-logo {
+    margin-left: 0;
+    transform: translateX(-5px);
   }
 
   .footer-copyright {
-    background: var(--color-primary);
-    font-size: 14px;
-    color: var(--color-light);
-    display: flex;
-    align-items: center;
-    margin-top: 1.5rem;
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    height: 60px;
   }
-  
-  .footer-copyright span {
-    margin-left: 3rem;
-  }
-  
 
-  @media  (max-width: 768px) {
-    .links-container {
-      flex-wrap: wrap;
-    }
+  .footer-copyright span {
+    margin: 0 auto; 
   }
-  
+}
