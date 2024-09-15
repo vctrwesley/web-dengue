@@ -1,0 +1,130 @@
+/*----------------------------------------- Localização Mapa ------------------------------*/
+
+.localizacao {
+    height: 1200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a2c38;
+}
+
+.localizacao h1 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    /* Ajuste o tamanho da fonte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.localizacao img {
+    width: 100%;
+    height: auto;
+    max-width: 1500px;
+    /* Limita a largura máxima da imagem*/
+    max-height: 90%;
+    /* Limita a altura máxima da imagem ao tamanho do container */
+    object-fit: contain;
+    /*display: block; /* Remove o espaço inferior da imagem */
+    margin: 0 auto;
+    /* Centraliza a imagem */
+}
+
+/*----------------------------------------- Carrosel Agentes ------------------------------*/
+.carrosel-container {
+    height: 750px;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a778a;
+}
+
+.Profissionais {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+}
+
+.carrosel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrosel-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrosel-slide img {
+    width: 40%;
+    height: 100%;
+}
+
+.carrosel-control {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carrosel-control.prev {
+    left: 10px;
+}
+
+.carrosel-control.next {
+    right: 10px;
+}
+
+.solicitacao-container {
+    height: 720px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.formulario-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-top {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.formulario-top-left,
+.formulario-top-right {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: auto;
+    /* margin: 0 8px; */
+}
+
+.formulario-bottom {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: auto;
+}
+
+.solicitacao-image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.solicitacao-image img {
+    width: 67%;
+}

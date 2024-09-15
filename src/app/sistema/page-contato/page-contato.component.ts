@@ -1,10 +1,36 @@
-import { Component } from '@angular/core';
+// page-contato.component.ts
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-page-contato',
-  templateUrl: './page-contato.component.html',
-  styleUrl: './page-contato.component.css'
+    selector: 'app-page-contato',
+    templateUrl: './page-contato.component.html',
+    styleUrls: ['./page-contato.component.css'],
 })
 export class PageContatoComponent {
+    //Carrosel!!!
+    slides = [
+        { image: 'assets/JV.png' },
+        { image: 'assets/JV.png' },
+        { image: 'assets/JV.png' },
+        // Adicione mais slides conforme necessário
+    ];
 
+    currentIndex = 0;
+
+    prevSlide() {
+        const totalSlides = this.slides.length;
+        this.currentIndex = (this.currentIndex - 1 + totalSlides) % totalSlides;
+        this.updatecarrosel();
+    }
+
+    nextSlide() {
+        const totalSlides = this.slides.length;
+        this.currentIndex = (this.currentIndex + 1) % totalSlides;
+        this.updatecarrosel();
+    }
+
+    updatecarrosel() {
+        const carrosel = document.querySelector('.carrosel') as HTMLElement;
+        carrosel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+    }
 }
