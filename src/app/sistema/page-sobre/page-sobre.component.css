@@ -17,7 +17,7 @@
     justify-content: center;
 }
 
-.text h2 {
+.text h3 {
     text-align: center;
     margin: 0 32px;
     font-weight: 400;
@@ -41,7 +41,91 @@
     border-radius: 8px;
 }
 
-.section-04 {
+.section-sintomas {
+    background: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 60px;
+}
+
+.title-sintomas h2{
+    color: var(--color-light);
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 32px;
+    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container-sintomas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.sintoma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.icone {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.triangle {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+}
+
+.centered-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+}
+
+.text-sintoma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    max-width: 330px;
+}
+
+.text-sintoma h3 {
+    color: var(--color-text-dark);
+    font-size: 32px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.text-sintoma p {
+    color: var(--color-light);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+.section-comunidade {
     background: var(--bg-color-blueDark);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,23 +136,17 @@
     gap: 24px;
 }
 
-.coleta {
-    
-    width: 100%;
-    max-width: 2000px;
-}
-
-.img-coleta {
+.img-comunidade {
     margin: 40px;
 }
 
-.img-coleta img {
+.img-comunidade img {
     width: 80%;
     height: auto;
     border-radius: 8px;
 }
 
-.text-coleta {
+.text-comunidade {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -78,7 +156,7 @@
     max-width: 560px;
 }
 
-.text-coleta h3 {
+.text-comunidade h2 {
     color: var(--color-light);
     font-size: 36px;
     text-align: left;
@@ -87,7 +165,7 @@
     font-weight: 600;
 }
 
-.text-coleta p {
+.text-comunidade p {
     color: var(--color-light);
     font-size: 18px;
     margin: 24px;
@@ -95,7 +173,7 @@
     max-width: 836px;
 }
 
-.text-coleta span {
+.text-comunidade span {
     color: var(--color-light);
     font-weight: 500;
     font-size: 26px;
@@ -123,28 +201,28 @@
     .images {
         gap: 1rem;
     }
-    
 
-    .section-04 {
+
+    .section-comunidade {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .img-coleta {
+    .img-comunidade {
         margin: 0;
     }
 
-    .text-coleta {
+    .text-comunidade {
         margin: 0;
     }
-    
-    .text-coleta h3 {
+
+    .text-comunidade h3 {
         font-size: 24px;
     }
 
-    .img-coleta img {
+    .img-comunidade img {
         width: 100%;
     }
-    
+
 }
