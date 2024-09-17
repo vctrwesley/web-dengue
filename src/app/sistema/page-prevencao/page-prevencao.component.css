@@ -28,10 +28,17 @@ body {
 }
 
 .prevention-tips {
-  background-color: #ff7f32;
+  background-color: rgba(255, 118, 30, 15%);
   color: white;
-  padding: 50px 20px;
+  padding: 50px 0px;
   text-align: center;
+}
+
+.prevention-tips h2{
+  background: linear-gradient(to bottom, #B55417, #FF761E);
+  padding: 40px 40px;
+  font-size: 32px;
+  color: #e8e8e8;
 }
 
 .tips-container {
@@ -40,7 +47,7 @@ body {
   gap: 20px; /* Espaçamento entre os itens */
   margin-top: 20px;
   justify-content: center; /* Centralizar o conteúdo */
-  background-color: rgba(255, 118, 30, 15%);
+  padding: 0 20px;
 }
 
 .tip {
@@ -67,6 +74,18 @@ body {
   margin: 0;
 }
 
+.divider{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.divider img{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
 
 .educational-section {
   display: flex;
