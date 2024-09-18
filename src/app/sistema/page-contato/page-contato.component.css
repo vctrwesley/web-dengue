@@ -8,6 +8,12 @@
     background-color: #1a2c38;
 }
 
+google-map {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 .localizacao h1 {
     display: grid;
     justify-content: center;
@@ -27,7 +33,6 @@
 /*----------------------------------------- Carrosel Agentes ------------------------------*/
 .carrosel-container {
     height: 65vh;
-    overflow: hidden;
     display: grid;
     justify-content: center;
     align-items: center;
