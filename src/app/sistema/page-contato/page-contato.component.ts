@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class PageContatoComponent {
     //Carrosel!!!
     slides = [
-        { image: 'assets/JV.png' },
-        { image: 'assets/JV.png' },
-        { image: 'assets/JV.png' },
+        { image: 'assets/images/cards_Agentes/felipe.png' },
+        { image: 'assets/images/cards_Agentes/felipe.png' },
+        { image: 'assets/images/cards_Agentes/felipe.png' },
         // Adicione mais slides conforme necessário
     ];
 
