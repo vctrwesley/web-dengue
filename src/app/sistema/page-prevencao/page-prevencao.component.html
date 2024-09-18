@@ -1,1 +1,135 @@
 <app-header [title]="'Dicas de prevenção'"></app-header>
+<main>
+  <section class="init-page">
+    <div class="education-content">
+      <div class="hero">
+        <h2>
+          A dengue é uma infecção viral transmitida pela picada do mosquito
+          Aedes aegypti. Com quatro tipos de vírus, uma pessoa pode contrair a
+          doença mais de uma vez. Os sintomas incluem febre alta e dores
+          intensas, podendo ser grave. A prevenção envolve eliminar criadouros
+          de mosquitos que acumulam água.
+        </h2>
+      </div>
+      <div class="iframe-video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/sh6RXRbW2W0?si=tPcOQ__KS5mh_7Oq"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="prevention-tips">
+    <h2>Como se prevenir de forma rápida e eficaz</h2>
+    <div class="tips-container">
+      <div class="tip">
+        <img src="assets/icons/lixo.png" alt="Lixo Icon" />
+        <p>Feche bem os sacos de lixos e mantenha as lixeiras tampadas</p>
+      </div>
+      <div class="tip">
+        <p>Retire os pratos dos vasos de plantas</p>
+        <img src="assets/icons/vaso.png" alt="Vaso Icon" />
+      </div>
+      <div class="tip">
+        <img src="assets/icons/repelente.png" alt="Repelente Icon" />
+        <p>Use repelente</p>
+      </div>
+      <div class="tip">
+        <p>Guarde pneus e garrafas em locais cobertos</p>
+        <img src="assets/icons/pneus.png" alt="Pneu Icon" />
+      </div>
+      <div class="tip">
+        <img src="assets/icons/medico.png" alt="Medico Icon" />
+        <p>Em caso de sintomas, procure um médico e jamais se automedique</p>
+      </div>
+      <div class="tip">
+        <p>Verifique se a caixa d’água está bem fechada</p>
+        <img src="assets/icons/caixa.png" alt="Caixa Icon" />
+      </div>
+      <div class="tip">
+        <img src="assets/icons/folhas.png" alt="Folha Icon" />
+        <p>Recolha folhas e objetos do quintal</p>
+      </div>
+      <div class="tip">
+        <p>Mantenha sempre calhas e ralos externos da casa limpos</p>
+        <img src="assets/icons/calha.png" alt="Calha Icon" />
+      </div>
+    </div>
+  </section>
+
+  <section class="divider">
+    <img src="assets/images/slogan.png" alt="Divider" />
+  </section>
+
+  <section class="educational-section">
+    <div class="education-content">
+      <div class="text-content">
+        <h2>
+          A Importância de Ensinar as Crianças sobre a Prevenção da Dengue
+        </h2>
+        <p>
+          Ensinar as crianças sobre a dengue é crucial para promover a
+          conscientização desde cedo e ajudar a prevenir a disseminação da
+          doença. Ao aprenderem sobre como o mosquito Aedes aegypti transmite o
+          vírus, os sintomas da doença, e as maneiras de eliminar os criadouros,
+          as crianças podem se tornar agentes de mudança em suas famílias e
+          comunidades. Esse conhecimento as capacita a adotar práticas de
+          prevenção, como evitar água parada e manter o ambiente limpo, além de
+          incentivar outras pessoas a fazer o mesmo.
+        </p>
+      </div>
+      <div class="iframe-container">
+        <iframe
+          src="https://www.ludoeducativo.com.br/pt/embed/contra-dengue-3"
+          frameborder="0"
+          title="Contra Dengue 3 - Portal Ludo Educativo"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="tutorials">
+    <h2>Tutoriais de como se proteger</h2>
+    <div id="slider-container">
+      <span (click)="slideLeft()" class="btn left-btn"></span>
+      <div id="slider" [style.margin-left]="currentMargin + '%'">
+        <div class="slide">
+          <iframe
+            src="https://www.youtube.com/embed/NWvkpEg1TN0"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="slide">
+          <iframe
+            src="https://www.youtube.com/embed/PxFSnK8EYLE"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="slide">
+          <iframe
+            src="https://www.youtube.com/embed/MaucSdm7aUU"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="slide">
+          <iframe
+            src="https://www.youtube.com/embed/ywr1y2h1NQI"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <span (click)="slideRight()" class="btn right-btn"></span>
+    </div>
+  </section>
+</main>
