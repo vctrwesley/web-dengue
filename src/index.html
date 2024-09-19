@@ -6,7 +6,10 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/icons/icon-navegador-webD.png">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-ZcSYymvu5qO1nnq6zrxD-aFxMgfz4w"></script>
+  <script>
+    const apiKey = '{{ environment.googleMapsApiKey }}';
+    document.write(`<script src="https://maps.googleapis.com/maps/api/js?key=${apiKey}"><\/script>`);
+  </script>
 </head>
 <body>
   <app-root></app-root>
