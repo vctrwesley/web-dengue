@@ -1,1 +1,86 @@
 <app-header [title]="'Contato'"></app-header>
+
+
+<!-- Solicitação  -->
+<div class="solicitacao-container">
+    <div class="formulario-container">
+        <div>
+            <h1>Solicitação de<br />visita</h1>
+            <p>
+                Solicite aqui a visita de um agente de endemias<br />
+                ao seu domicílio
+            </p>
+            <label for="formulario" class="formulario-label">
+                <div class="formulario-top">
+                    <div class="formulario-top-left">
+                        <div>
+                            Nome<br />
+                            <input type="text" placeholder="Digite seu nome" class="formulario nome" /><br />
+                        </div>
+                        <div>
+                            Endereço<br />
+                            <input type="text" placeholder="Digite seu endereço"
+                                class="formulario endereco" /><br />
+                        </div>
+                    </div>
+                    <div class="formulario-top-right">
+                        <div>
+                            Email<br />
+                            <input type="text" placeholder="Digite seu e-mail" class="formulario email" /><br />
+                        </div>
+                        <div>
+                            CEP<br />
+                            <input type="text" placeholder="Digite seu CEP" class="formulario cep" /><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario-bottom">
+                    <div>
+                        Assunto<br />
+                        <input type="text" placeholder="Digite o motivo da solicitação"
+                            class="formulario assunto" /><br />
+                    </div>
+                    <div>
+                        <input type="submit" value="Solicitar Visita" class="formulario botao" /><br />
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="solicitacao-image">
+        <img src="assets/images/cards_Agentes/solicitacao.png" />
+    </div>
+</div>
+
+<!-- Profissionais e Agentes-->
+<section class="carrosel-container">
+    <div class="Profissionais">
+        <h1>Profissionais/Agentes</h1>
+    </div>
+
+    <div class="carrosel">
+        <div class="carrosel-slide" *ngFor="let slide of slides">
+            <img [src]="slide.image" alt="Slide" />
+        </div>
+    </div>
+
+    <button class="carrosel-control prev" (click)="prevSlide()">
+        &#10094;
+    </button>
+
+    <button class="carrosel-control next" (click)="nextSlide()">
+        &#10095;
+    </button>
+</section>
+
+<section class="localizacao" id="maps">
+<h1>Agência Proxima de Você</h1>
+<!--<google-map
+    [center]="center"
+    [zoom]="zoom"
+    [width]="'100%'"
+    [height]="'400px'">
+    <map-marker [position]="marker.position"></map-marker> 
+</google-map>-->
+</section>
+
