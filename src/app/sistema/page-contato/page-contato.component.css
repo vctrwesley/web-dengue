@@ -68,7 +68,10 @@ app-maps {
     align-items: center;
 }
 
-/* .formulario-header {} */
+.formulario-header,
+.formulario-label {
+    width: 50%;
+}
 
 .formulario-top {
     display: grid;
