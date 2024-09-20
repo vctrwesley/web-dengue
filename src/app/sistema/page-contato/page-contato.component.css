@@ -62,7 +62,8 @@
     width: 67%;
 }
 
-/* formulario de solicitação */
+/*------------------------------------ formulario de solicitação -------------------------------------------*/
+
 .solicitacao-container {
     height: 720px;
     overflow: hidden;
@@ -83,7 +84,7 @@
 }
 
 .formulario-container input {
-    width: 90%; /* Largura dos campos normais de texto */
+    width: 90%; 
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
