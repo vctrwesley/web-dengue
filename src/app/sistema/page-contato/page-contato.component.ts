@@ -35,7 +35,7 @@ export class PageContatoComponent {
   }
 
   // Google Maps
-  center: google.maps.LatLngLiteral = { lat: -23.5505, lng: -46.6333 }; // Exemplo de coordenadas
+/*  center: google.maps.LatLngLiteral = { lat: -23.5505, lng: -46.6333 }; // Exemplo de coordenadas
   zoom = 12;
   markers = [
     {
@@ -44,5 +44,5 @@ export class PageContatoComponent {
         lng: -46.6333,
       },
     },
-  ];
+  ];*/
 }

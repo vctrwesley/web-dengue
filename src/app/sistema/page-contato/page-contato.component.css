@@ -8,12 +8,6 @@
     background-color: #1a2c38;
 }
 
-google-map {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
 .localizacao h1 {
     display: grid;
     justify-content: center;
@@ -23,13 +17,6 @@ google-map {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.localizacao img {
-    height: auto;
-    max-width: 80%;
-    object-fit: contain;
-    margin: 0 auto;
-}
-
 /*----------------------------------------- Carrosel Agentes ------------------------------*/
 .carrosel-container {
     height: 65vh;
@@ -37,58 +24,6 @@ google-map {
     justify-content: center;
     align-items: center;
     background-color: #3a778a;
-}
-
-.Profissionais {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5em;
-    color: white;
-}
-
-.carrosel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carrosel-slide {
-    min-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carrosel-slide img {
-    width: 40%;
-    height: 100%;
-}
-
-.carrosel-control {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carrosel-control.prev {
-    left: 10px;
-}
-
-.carrosel-control.next {
-    right: 10px;
-}
-
-.solicitacao-container {
-    height: 720px;
-    overflow: hidden;
-    background-color: #e8e8e8;
-
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 50% 50%;
 }
 
 .formulario-container {
@@ -125,4 +60,65 @@ google-map {
 
 .solicitacao-image img {
     width: 67%;
+}
+
+/* formulario de solicitação */
+.solicitacao-container {
+    height: 720px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.formulario-container[text]{
+}
+
+.formulario-top[text]{
+}
+
+.formulario-bottom[text]{
+}
+
+.formulario-container input {
+    width: 90%; /* Largura dos campos normais de texto */
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.formulario-top input {
+    width: 90%; /* Largura dos inputs de nome, email, endereço, CEP */
+}
+
+.formulario-bottom input {
+    width: 95%; /* O campo de assunto ocupa 100% */
+    height: 95%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    grid-column: span 2; /* Faz com que ocupe o espaço de duas colunas */
+}
+
+.formulario_botao{
+    background-color: #ff7b00; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.formulario_botao:hover{
+    background-color: #45a049; 
+}
+
+.solicitacao-image{
+    border-radius: 20px;
 }
