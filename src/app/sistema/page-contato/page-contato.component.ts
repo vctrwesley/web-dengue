@@ -33,16 +33,4 @@ export class PageContatoComponent {
     const carrosel = document.querySelector('.carrosel') as HTMLElement;
     carrosel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
   }
-
-  // Google Maps
-/*  center: google.maps.LatLngLiteral = { lat: -23.5505, lng: -46.6333 }; // Exemplo de coordenadas
-  zoom = 12;
-  markers = [
-    {
-      position: {
-        lat: -23.5505,
-        lng: -46.6333,
-      },
-    },
-  ];*/
 }
