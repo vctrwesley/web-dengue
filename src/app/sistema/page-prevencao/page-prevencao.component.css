@@ -43,34 +43,18 @@ body {
 
 .tips-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-  gap: 20px; /* Espaçamento entre os itens */
-  margin-top: 20px;
+  grid-template-columns: repeat(2, auto); /* Deixe o tamanho das colunas automático */
+  gap: 10px; /* Ajustar o espaçamento */
+  column-gap: 150px;
   justify-content: center; /* Centralizar o conteúdo */
   padding: 0 20px;
 }
 
-.tip-dir {
-  position: relative;
-  width: 500px; /* Defina o tamanho conforme necessário */
-  padding: 20px;
-  background-image: url('/assets/images/page-prevencao/bg-art-1.png'); /* Use a imagem de fundo inclinada */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  color: black;
-  font-size: 18px;
-  border-radius: 10px;
-
-}
-
 .tip-esq {
   position: relative;
-  width: 500px; /* Defina o tamanho conforme necessário */
+  width: 400px; 
   padding: 20px;
-  background-image: url('/assets/images/page-prevencao/bg-art-2.png'); /* Use a imagem de fundo inclinada */
+  background-image: url('/assets/images/page-prevencao/bg-art-1.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,19 +63,42 @@ body {
   color: black;
   font-size: 18px;
   border-radius: 10px;
-
 }
 
-.tip-dir img,
-.tip-esq img {
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
+.tip-dir {
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  background-image: url('/assets/images/page-prevencao/bg-art-2.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.tip-esq img,
+.tip-dir img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px; /* Ajustar espaçamento entre o ícone e o texto */
+  transform: none; /* Remover transformações */
 }
 
 .tip-dir p,
 .tip-esq p {
   margin: 0;
+}
+
+.icon-esq{
+  transform: translateY(-50%) translateX(-30%);
+}
+
+.icon-dir{
+  transform: translateX(40px);
 }
 
 .banner-content-slogan {
