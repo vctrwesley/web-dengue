@@ -1,18 +1,25 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GoogleMapsModule } from '@angular/google-maps';
+
 import { HeaderComponent } from './header/header.component';
+import { MapsComponent } from './maps/maps.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    MapsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    GoogleMapsModule
   ],
   exports: [
-    HeaderComponent
-  ]
+    HeaderComponent,
+    MapsComponent,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SharedModule { }

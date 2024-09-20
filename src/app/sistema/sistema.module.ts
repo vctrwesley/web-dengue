@@ -14,12 +14,13 @@ import { SharedModule } from '../shared/shared.module';
     PageHomeComponent,
     PageSobreComponent,
     PagePrevencaoComponent,
-    PageContatoComponent
+    PageContatoComponent,
   ],
   imports: [
     CommonModule,
     SistemaRoutingModule,
-    SharedModule
+    SharedModule,
+    
   ],
 })
 export class SistemaModule { }
