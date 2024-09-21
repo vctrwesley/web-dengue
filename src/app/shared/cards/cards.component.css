@@ -1,0 +1,50 @@
+.Card {
+display: grid;
+grid-template-columns:1fr auto 2fr; 
+background-color: white; 
+border-radius: 10px; 
+padding: 50px;
+width: 65ch; 
+height: auto;
+margin: auto; 
+align-items: center; 
+place-items: center;
+column-gap: 20px;
+}
+
+
+.divisoria {
+width: 2px; 
+background-color: #333; 
+height: 80%; 
+justify-self: center;
+}
+
+
+.foto {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding-right: 16px; 
+}
+
+.foto img {
+width: 25ch; 
+height: 25ch;
+border-radius: 50%; 
+object-fit: cover; 
+}
+
+
+.dados {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
+
+.dados p {
+margin: 6px 0; 
+font-size: 1.4em; 
+color: #333; 
+}
