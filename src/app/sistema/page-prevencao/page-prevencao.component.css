@@ -30,7 +30,7 @@ body {
 .prevention-tips {
   background-color: rgba(255, 118, 30, 15%);
   color: white;
-  padding: 50px 0px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -43,10 +43,10 @@ body {
 
 .tips-container {
   display: grid;
-  grid-template-columns: repeat(2, auto); /* Deixe o tamanho das colunas automático */
-  gap: 10px; /* Ajustar o espaçamento */
+  grid-template-columns: repeat(2, auto); 
+  gap: 10px; 
   column-gap: 150px;
-  justify-content: center; /* Centralizar o conteúdo */
+  justify-content: center; 
   padding: 0 20px;
 }
 
@@ -62,7 +62,6 @@ body {
   align-items: center;
   color: black;
   font-size: 18px;
-  border-radius: 10px;
 }
 
 .tip-dir {
@@ -77,15 +76,12 @@ body {
   align-items: center;
   color: black;
   font-size: 18px;
-  border-radius: 10px;
 }
 
 .tip-esq img,
 .tip-dir img {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px; /* Ajustar espaçamento entre o ícone e o texto */
-  transform: none; /* Remover transformações */
+  width: 100px;
+  height: 100px;
 }
 
 .tip-dir p,
@@ -94,11 +90,11 @@ body {
 }
 
 .icon-esq{
-  transform: translateY(-50%) translateX(-30%);
+  transform: translateX(-50px) translateY(30px);
 }
 
 .icon-dir{
-  transform: translateX(40px);
+  transform: translateX(50px) translateY(30px);
 }
 
 .banner-content-slogan {
