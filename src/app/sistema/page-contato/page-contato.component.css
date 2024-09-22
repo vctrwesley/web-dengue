@@ -57,7 +57,6 @@ app-maps {
 
 .solicitacao-container {
     height: 720px;
-    overflow: hidden;
     background-color: #e8e8e8;
 
     display: grid;
@@ -65,27 +64,17 @@ app-maps {
     grid-template-columns: 50% 50%;
 }
 
-.solicitacao-image img {
-    width: auto;
-    height: 80%;
-}
-
-.formulario-container,
-.solicitacao-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.formulario-header,
-.formulario-label {
-    width: 50%;
+.formulario-container {
+    display: grid;
+    place-content: center;
 }
 
 .formulario-header {
     margin-bottom: 24px;
+}
+
+.formulario-label {
+    display: grid;
 }
 
 .formulario-top {
@@ -97,33 +86,27 @@ app-maps {
 
 .formulario-bottom {
     display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: auto;
 }
 
 .formulario-label input[type="text"],
 .formulario-label textarea {
     padding: 8px;
-    margin-bottom: 0.25em;
+    margin: 0.25em 0;
     border: 1px solid black;
     border-radius: 4px;
     width: 100%;
 }
 
-.formulario-top input[type="text"] {
-    margin-top: 0.25em;
-}
-
 .formulario-bottom textarea {
-    /* A largura do div menos o padding menos a largura da borda de ambos os lados */
     width: calc(100% + 1em);
     font-family: inherit;
     height: 6em;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .formulario-label input[type="button"] {
     width: calc(100% + 1em + 2px);
+    height: auto;
     background-color: #ff7b00;
     color: white;
     border: none;
@@ -132,32 +115,35 @@ app-maps {
     cursor: pointer;
 }
 
+.solicitacao-image {
+    display: grid;
+}
+
+.solicitacao-image img {
+    width: 67%;
+    margin: auto;
+}
+
 @media screen and (max-width: 600px) {
     .solicitacao-container {
         height: auto;
-
-        display: grid;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: auto auto;
         grid-template-columns: auto;
     }
 
     .formulario-container {
-        height: auto;
-        margin: 16px 0;
+        /* height: 600px; */
+        margin: 16px auto;
     }
 
     .formulario-header,
     .formulario-label {
         width: 80%;
-    }
-
-    .solicitacao-image {
-        height: 384px;
+        margin: auto;
     }
 
     .solicitacao-image img {
-        width: auto;
-        height: 80%;
+        margin: 32px auto;
     }
 
     .formulario-top {
