@@ -57,3 +57,10 @@
     margin: 2px;
     font-weight: 200;
 }
+
+@media screen and (max-width: 768px) {
+    .card-container{
+        width: 400px;
+        height: 300px;
+    }
+}

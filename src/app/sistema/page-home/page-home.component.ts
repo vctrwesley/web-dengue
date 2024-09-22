@@ -126,7 +126,7 @@ export class PageHomeComponent implements OnInit, AfterViewInit {
 
     // Ajuste para telas menores
     if (window.innerWidth <= 768) { // Tablets e celulares
-      offset = (containerWidth / 2) - (itemWidth / 2) - this.currentIndex * (itemWidth + 10);
+      offset = (containerWidth / 2) - (itemWidth / 2) - this.currentIndex * (itemWidth + 20) + 1020;
     }
 
     carouselElement.style.transform = `translateX(${offset}px)`;
