@@ -51,6 +51,9 @@ app-maps {
 }
 
 /*------------------------------------ formulario de solicitação -------------------------------------------*/
+.solicitacao-container * {
+    box-sizing: border-box;
+}
 
 .solicitacao-container {
     height: 720px;
@@ -62,13 +65,18 @@ app-maps {
     grid-template-columns: 50% 50%;
 }
 
-.formulario-container {
+.solicitacao-image img {
+    width: auto;
+    height: 80%;
+}
+
+.formulario-container,
+.solicitacao-image {
     display: flex;
     flex-direction: column;
-    /* grid-template-rows: 40% 40%; */
-    /* grid-template-columns: auto; */
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .formulario-header,
@@ -76,57 +84,90 @@ app-maps {
     width: 50%;
 }
 
-.formulario-top {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 50% 50%;
+.formulario-header {
+    margin-bottom: 24px;
 }
 
-.formulario-top-left,
-.formulario-top-right {
+.formulario-top {
     display: grid;
     grid-template-rows: 50% 50%;
-    grid-template-columns: auto;
-
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 4px;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1em;
 }
 
 .formulario-bottom {
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: auto;
-
-    justify-content: center;
-    align-items: center;
 }
 
-.formulario-label input {
+.formulario-label input[type="text"],
+.formulario-label textarea {
     padding: 8px;
-
+    margin-bottom: 0.25em;
     border: 1px solid black;
     border-radius: 4px;
-    margin: 4px 0;
+    width: 100%;
 }
 
-.formulario-top input {
-    width: 16em;
+.formulario-top input[type="text"] {
+    margin-top: 0.25em;
 }
 
-.formulario-bottom input {
-    width: calc(32em + 2 * 2 * 8px - 4px);
-    height: 4em;
-    margin-bottom: 1em;
+.formulario-bottom textarea {
+    /* A largura do div menos o padding menos a largura da borda de ambos os lados */
+    width: calc(100% + 1em);
+    font-family: inherit;
+    height: 6em;
+    margin-bottom: 24px;
 }
 
-.formulario-button {
-    width: calc(32em + 2 * 2 * 8px + 14px);
+.formulario-label input[type="button"] {
+    width: calc(100% + 1em + 2px);
     background-color: #ff7b00;
     color: white;
     border: none;
     border-radius: 6px;
     padding: 8px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .solicitacao-container {
+        height: auto;
+
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: auto;
+    }
+
+    .formulario-container {
+        height: auto;
+        margin: 16px 0;
+    }
+
+    .formulario-header,
+    .formulario-label {
+        width: 80%;
+    }
+
+    .solicitacao-image {
+        height: 384px;
+    }
+
+    .solicitacao-image img {
+        width: auto;
+        height: 80%;
+    }
+
+    .formulario-top {
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-columns: auto;
+    }
+
+    .formulario-bottom textarea,
+    .formulario-label input[type="button"] {
+        width: 100%;
+    }
 }

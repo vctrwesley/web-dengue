@@ -1,55 +1,44 @@
 <app-header [title]="'Contato'"></app-header>
 
 <!-- Solicitação  -->
-<div class="solicitacao-container">
+<section class="solicitacao-container">
     <div class="formulario-container">
         <div class="formulario-header">
-            <h1>Solicitação de<br />visita</h1>
+            <h1>Solicitação de visita</h1>
             <p>
-                Solicite aqui a visita de um agente de endemias<br />
-                ao seu domicílio
+                Solicite aqui a visita de um agente de endemias ao seu domicílio
             </p>
         </div>
         <label for="formulario" class="formulario-label">
             <div class="formulario-top">
-                <div class="formulario-top-left">
-                    <div>
-                        Nome<br />
-                        <input type="text" placeholder="Digite seu nome" class="formulario nome" /><br />
-                    </div>
-                    <div>
-                        Endereço<br />
-                        <input type="text" placeholder="Digite seu endereço" class="formulario endereco" /><br />
-                    </div>
+                <div>
+                    Nome<br />
+                    <input type="text" placeholder="Digite seu nome" id="formulario-nome" />
                 </div>
-                <div class="formulario-top-right">
-                    <div>
-                        Email<br />
-                        <input type="text" placeholder="Digite seu e-mail" class="formulario email" /><br />
-                    </div>
-                    <div>
-                        CEP<br />
-                        <input type="text" placeholder="Digite seu CEP" class="formulario cep" /><br />
-                    </div>
+                <div>
+                    Email<br />
+                    <input type="text" placeholder="Digite seu e-mail" id="formulario-email" />
+                </div>
+                <div>
+                    Endereço<br />
+                    <input type="text" placeholder="Digite seu endereço" id="formulario-endereco" />
+                </div>
+                <div>
+                    CEP<br />
+                    <input type="text" placeholder="Digite seu CEP" id="formulario-cep" />
                 </div>
             </div>
             <div class="formulario-bottom">
-                <div>
-                    Assunto<br />
-                    <input type="text" placeholder="Digite o motivo da solicitação" class="formulario assunto" />
-                </div>
-                <div>
-                    <button type="button" class="formulario-button">
-                        Solicitar Visita
-                    </button>
-                </div>
+                Assunto<br />
+                <textarea placeholder="Digite o motivo da solicitação" id="formulario-assunto"></textarea>
             </div>
+            <input type="button" value="Solicitar Visita" id="formulario-button" />
         </label>
     </div>
     <div class="solicitacao-image">
         <img src="assets/images/cards_Agentes/solicitacao.png" />
     </div>
-</div>
+</section>
 
 <!-- Profissionais e Agentes-->
 <section class="carrosel-container">
