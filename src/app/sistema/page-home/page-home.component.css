@@ -271,10 +271,16 @@
     text-align: center;
     min-height: 70vh;
     flex-direction: column;
+    gap: 24px;
+}
+
+.title-section h2{
+    font-size: 40px;
+    color: var(--color-light);
+    margin: 32px;
 }
 
 /* Carrosel */
-/* Estilos do contêiner do carrossel */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -290,17 +296,17 @@
 
 .carousel-item {
     flex: 0 0 auto;
-    width: 40%; /* Ajusta a largura do item */
-    max-width: 450px; /* Define um limite máximo de largura */
+    width: 40%;
+    max-width: 450px; 
     margin: 0 10px;
-    opacity: 0.5; /* Reduz a opacidade dos itens fora do foco */
-    transform: scale(0.8); /* Reduz o tamanho dos itens fora do foco */
+    opacity: 0.5; 
+    transform: scale(0.8); 
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carousel-item.active {
-    transform: scale(1); /* Aumenta o tamanho do item ativo */
-    opacity: 1; /* Torna o item ativo completamente visível */
+    transform: scale(1);
+    opacity: 1; 
 }
 
 .carousel-image {
@@ -317,18 +323,19 @@
 }
 
 .prev, .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: transparent;
+    color: var(--color-light);
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1;
-    margin: 0 10px;
+    margin: 0 14px;
+    font-size: 32px;
 }
 
 .indicators {
     display: flex;
-    gap: 5px;
+    gap: 6px;
 }
 
 .indicators span {
@@ -341,7 +348,7 @@
 }
 
 .indicators span.active {
-    background-color: rgba(255, 255, 255, 1);
+    background: var(--color-light);
 }
 
 @media screen and (max-width: 1024px) {

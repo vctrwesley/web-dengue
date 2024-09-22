@@ -113,7 +113,7 @@ export class PageHomeComponent implements OnInit, AfterViewInit {
   startAutoplay() {
     setInterval(() => {
       this.scrollRight();
-    }, 6000);
+    }, 8000);
   }
 
   updateCarousel() {
