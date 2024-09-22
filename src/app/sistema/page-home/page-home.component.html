@@ -68,6 +68,18 @@
 </section>
 <section id="home-03">
     <div class="section-03">
+        <div class="carousel-container">
+            <div class="carousel" #carousel>
+              <div class="carousel-item" *ngFor="let item of items">
+                <img [src]="item.image" alt="{{item.title}}" class="carousel-image">
+              </div>
+            </div>
+            
+            <!-- Controles de Navegação -->
+            <button class="prev" (click)="scrollLeft(carousel)">‹</button>
+            <button class="next" (click)="scrollRight(carousel)">›</button>
+          </div>
+                           
     </div>
 </section>
 <section class="banner-02">
