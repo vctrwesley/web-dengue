@@ -157,15 +157,6 @@
     margin: 32px;
 }
 
-.section-03 {
-    background: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 60vh;
-}
-
 .section-04 {
     background: var(--bg-color-blue);
     display: grid;
@@ -272,6 +263,16 @@
     border-radius: 8px;
 }
 
+.section-03 {
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+    flex-direction: column;
+}
+
 /* Carrosel */
 /* Estilos do contêiner do carrossel */
 .carousel-container {
@@ -282,42 +283,65 @@
 
 .carousel {
     display: flex;
-    flex-direction: row;
-    overflow-x: hidden;
-    scroll-behavior: smooth; /* Rolagem suave */
-    transition: transform 1s ease;
+    justify-content: center;
+    transition: transform 1.5s ease;
+    position: relative;
 }
 
 .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 40%; /* Ajusta a largura do item */
+    max-width: 450px; /* Define um limite máximo de largura */
+    margin: 0 10px;
+    opacity: 0.5; /* Reduz a opacidade dos itens fora do foco */
+    transform: scale(0.8); /* Reduz o tamanho dos itens fora do foco */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    transform: scale(1); /* Aumenta o tamanho do item ativo */
+    opacity: 1; /* Torna o item ativo completamente visível */
 }
 
 .carousel-image {
-    width: 450px;
+    width: 100%;
     height: auto;
 }
 
 /* Estilos dos botões de navegação */
-button.prev,
-button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prev, .next {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1;
+    margin: 0 10px;
 }
 
-button.prev {
-    left: 10px;
+.indicators {
+    display: flex;
+    gap: 5px;
 }
 
-button.next {
-    right: 10px;
+.indicators span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicators span.active {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 @media screen and (max-width: 1024px) {
