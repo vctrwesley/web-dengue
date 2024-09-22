@@ -13,13 +13,49 @@ export class PageHomeComponent implements OnInit, AfterViewInit {
   currentIndex: number = 0;
   itemWidth: number = 450;
 
-  items = [
-    { title: 'Card 1', image: './assets/images/page-home/card-feedback.png' },
-    { title: 'Card 2', image: './assets/images/page-home/card-feedback-02.png' },
-    { title: 'Card 3', image: './assets/images/page-home/card-feedback.png' },
-    { title: 'Card 4', image: './assets/images/page-home/card-feedback.png' },
-    { title: 'Card 5', image: './assets/images/page-home/card-feedback.png' },
-    { title: 'Card 6', image: './assets/images/page-home/card-feedback.png' },
+  depoimentos = [
+    {
+      depoimento: 'Já tive dengue duas vezes e não desejo isso a ninguém. As dores são intensas e a febre é debilitante. Desde então, fico atento a qualquer acúmulo de água e participo de campanhas de conscientização aqui na minha cidade.',
+      img: '/assets/images/page-home/photo-perfil.png',
+      nome: 'Raiumundo',
+      idade: '58 anos',
+      cidade: 'Juazeiro do Norte, CE'
+    },
+    {
+      depoimento: 'Eu achava que a dengue era algo distante até meu filho de 10 anos contrair a doença. Foram dias de muita preocupação e sofrimento. Agora, faço questão de verificar tudo em casa e ensinar meus vizinhos sobre os riscos de deixar água parada.',
+      img: '/assets/images/page-home/photo-perfil.png',
+      nome: 'João Pedro',
+      idade: '39 anos',
+      cidade: 'Sobral, CE'
+    },
+    {
+      depoimento: 'Sou agente de saúde em Quixadá e vejo de perto como a dengue afeta nossa população. Estamos sempre nas ruas, orientando e ajudando a eliminar focos do mosquito. Mas precisamos que cada morador faça sua parte para manter nossas comunidades seguras.',
+      img: '/assets/images/page-home/photo-perfil.png',
+      nome: 'Luciana',
+      idade: '34 anos',
+      cidade: 'Quixadá, CE'
+    },
+    {
+      depoimento: 'A dengue é um problema sério no Ceará, especialmente nas áreas mais urbanas. Como enfermeira, vejo muitos casos graves que poderiam ser evitados com medidas simples de prevenção. Todos precisam se conscientizar e agir!',
+      img: '/assets/images/page-home/photo-perfil.png',
+      nome: 'Fernanda',
+      idade: '42 anos',
+      cidade: 'Crato, CE'
+    },
+    {
+      depoimento: 'Quando a dengue apareceu na minha rua, não esperávamos que se espalhasse tão rápido. Vizinhos ficaram doentes e a preocupação aumentou. Desde então, todos nos unimos para eliminar focos do mosquito, e a nossa comunidade ficou mais vigilante e unida para enfrentar esse problema.',
+      img: '/assets/images/page-home/photo-perfil.png',
+      nome: 'Maria José',
+      idade: '47 anos',
+      cidade: 'Fortaleza, CE'
+    },
+    {
+      depoimento: 'Eu trabalho em uma escola pública e sempre reforço com meus alunos a importância de combater o mosquito. Eles levam essa mensagem para casa e, assim, toda a comunidade fica mais protegida. A dengue é perigosa e a educação é nossa melhor arma contra ela.',
+      img: '/assets/images/page-home/photo-perfil.png',
+      nome: 'Carlos',
+      idade: '37 anos',
+      cidade: 'Maracanaú, CE'
+    },
   ];
 
   constructor() {
@@ -60,12 +96,12 @@ export class PageHomeComponent implements OnInit, AfterViewInit {
   }
 
   scrollLeft() {
-    this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
+    this.currentIndex = (this.currentIndex - 1 + this.depoimentos.length) % this.depoimentos.length;
     this.updateCarousel();
   }
 
   scrollRight() {
-    this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    this.currentIndex = (this.currentIndex + 1) % this.depoimentos.length;
     this.updateCarousel();
   }
 
@@ -85,15 +121,15 @@ export class PageHomeComponent implements OnInit, AfterViewInit {
     const itemWidth = carouselElement.querySelector('.carousel-item').clientWidth;
     const containerWidth = carouselElement.offsetWidth;
 
-     // Calcula o deslocamento para centralizar o item ativo
-     let offset = (containerWidth / 2) - (itemWidth / 2) - this.currentIndex * (itemWidth + 20) + 500;
+    // Calcula o deslocamento para centralizar o item ativo
+    let offset = (containerWidth / 2) - (itemWidth / 2) - this.currentIndex * (itemWidth + 20) + 470;
 
-     // Ajuste para telas menores
-     if (window.innerWidth <= 768) { // Tablets e celulares
-       offset = (containerWidth / 2) - (itemWidth / 2) - this.currentIndex * (itemWidth + 10) + 350;
-     }
- 
-     carouselElement.style.transform = `translateX(${offset}px)`;
+    // Ajuste para telas menores
+    if (window.innerWidth <= 768) { // Tablets e celulares
+      offset = (containerWidth / 2) - (itemWidth / 2) - this.currentIndex * (itemWidth + 10);
+    }
+
+    carouselElement.style.transform = `translateX(${offset}px)`;
 
     // Aplica a classe 'active' no item atual para destacá-lo
     const items = carouselElement.querySelectorAll('.carousel-item');

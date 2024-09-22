@@ -1,0 +1,59 @@
+.card-container{
+    background: #F3F4F5;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    width: 450px;
+    height: 260px;
+    justify-content: space-between;
+}
+
+.card-depoimento {
+    display: flex;
+    text-align: justify;
+    margin: 8px;
+}
+
+.card-depoimento p{
+    font-size: 16px;
+    color: var(--color-dark);
+}
+
+.card-inf{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin: 8px;
+}
+
+.img-perfil img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.detail-perfil{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.detail-perfil h3{
+    color: var(--color-primary);
+    font-size: 20px;
+    margin: 2px;
+    font-weight: 600;
+}
+
+.detail-perfil h4{
+    color: var(--color-primary);
+    font-size: 18px;
+    margin: 2px;
+    font-weight: 200;
+}
