@@ -8,6 +8,7 @@
   align-items: center;
   background: rgba(58, 119, 138, 0.8);
   backdrop-filter: blur(10px);
+  z-index: 999;
 }
 
 .bar-container {

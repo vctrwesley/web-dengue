@@ -9,6 +9,7 @@
     padding: 50px;
     gap: 50px;
     height: 60vh;
+    z-index: -1;
 }
 
 .localizacao h1 {
@@ -28,16 +29,55 @@ app-maps {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    z-index: 1;
 }
 
 /*----------------------------------------- Carrosel Agentes ------------------------------*/
 .carrosel-container {
-    height: 65vh;
-    display: grid;
+    display: flex;
     justify-content: center;
+    /* Centraliza o app-cards horizontalmente */
     align-items: center;
+    /* Centraliza o app-cards verticalmente */
+    position: relative;
     background-color: #3a778a;
+    padding: 20px;
+    height: 65vh;
+    z-index: 0;
+}
+
+.carrosel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carrosel-control.prev {
+    left: 10px;
+}
+
+.carrosel-control.next {
+    right: 10px;
+}
+
+app-cards {
+    width: 300px;
+    max-width: 100%;
+    margin: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(-75%);
+        /* Move o card 20px para a direita */
+}
+
+/*------------------------------------ formulario de solicitação -------------------------------------------*/
+.solicitacao-container * {
+    box-sizing: border-box;
 }
 
 .solicitacao-image {
@@ -48,11 +88,6 @@ app-maps {
 
 .solicitacao-image img {
     width: 67%;
-}
-
-/*------------------------------------ formulario de solicitação -------------------------------------------*/
-.solicitacao-container * {
-    box-sizing: border-box;
 }
 
 .solicitacao-container {
