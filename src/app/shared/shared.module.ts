@@ -5,6 +5,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { HeaderComponent } from './header/header.component';
 import { CardsComponent } from './cards/cards.component';
 import { MapsComponent } from './maps/maps.component';
+import { CardDepoimentosComponent } from './card-depoimentos/card-depoimentos.component';
 
 
 
@@ -12,7 +13,8 @@ import { MapsComponent } from './maps/maps.component';
   declarations: [
     HeaderComponent,
     CardsComponent,
-    MapsComponent
+    MapsComponent,
+    CardDepoimentosComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { MapsComponent } from './maps/maps.component';
   exports: [
     HeaderComponent,
     CardsComponent,
-    MapsComponent
+    MapsComponent,
+    CardDepoimentosComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
