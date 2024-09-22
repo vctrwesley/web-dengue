@@ -1,7 +1,7 @@
 <app-header [title]="'Contato'"></app-header>
 
 <!-- Solicitação  -->
-<div class="solicitacao-container">
+<section class="solicitacao-container">
     <div class="formulario-container">
         <div class="formulario-header">
             <h1>Solicitação de visita</h1>
@@ -13,36 +13,32 @@
             <div class="formulario-top">
                 <div>
                     Nome<br />
-                    <input type="text" placeholder="Digite seu nome" class="formulario nome" /><br />
+                    <input type="text" placeholder="Digite seu nome" id="formulario-nome" />
                 </div>
                 <div>
                     Email<br />
-                    <input type="text" placeholder="Digite seu e-mail" class="formulario email" /><br />
+                    <input type="text" placeholder="Digite seu e-mail" id="formulario-email" />
                 </div>
                 <div>
                     Endereço<br />
-                    <input type="text" placeholder="Digite seu endereço" class="formulario endereco" /><br />
+                    <input type="text" placeholder="Digite seu endereço" id="formulario-endereco" />
                 </div>
                 <div>
                     CEP<br />
-                    <input type="text" placeholder="Digite seu CEP" class="formulario cep" /><br />
+                    <input type="text" placeholder="Digite seu CEP" id="formulario-cep" />
                 </div>
             </div>
             <div class="formulario-bottom">
-                <div>
-                    Assunto<br />
-                    <textarea placeholder="Digite o motivo da solicitação" class="formulario assunto"></textarea>
-                </div>
-                <div>
-                    <input type="button" value="Solicitar Visita" class="formulario-button" />
-                </div>
+                Assunto<br />
+                <textarea placeholder="Digite o motivo da solicitação" id="formulario-assunto"></textarea>
             </div>
+            <input type="button" value="Solicitar Visita" id="formulario-button" />
         </label>
     </div>
     <div class="solicitacao-image">
         <img src="assets/images/cards_Agentes/solicitacao.png" />
     </div>
-</div>
+</section>
 
 <!-- Profissionais e Agentes-->
 <section class="carrosel-container">

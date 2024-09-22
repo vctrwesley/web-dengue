@@ -51,6 +51,9 @@ app-maps {
 }
 
 /*------------------------------------ formulario de solicitação -------------------------------------------*/
+.solicitacao-container * {
+    box-sizing: border-box;
+}
 
 .solicitacao-container {
     height: 720px;
@@ -63,6 +66,7 @@ app-maps {
 }
 
 .solicitacao-image img {
+    width: auto;
     height: 80%;
 }
 
@@ -88,6 +92,7 @@ app-maps {
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
+    grid-column-gap: 1em;
 }
 
 .formulario-bottom {
@@ -102,26 +107,23 @@ app-maps {
     margin-bottom: 0.25em;
     border: 1px solid black;
     border-radius: 4px;
-}
-
-.formulario-label textarea {
-    height: 4em;
-    font-family: inherit;
+    width: 100%;
 }
 
 .formulario-top input[type="text"] {
-    width: calc(100% - 2 * 8px - 2px - 0.5em);
     margin-top: 0.25em;
 }
 
 .formulario-bottom textarea {
     /* A largura do div menos o padding menos a largura da borda de ambos os lados */
-    width: calc(100% - 2 * 8px - 0.5em);
+    width: calc(100% + 1em);
+    font-family: inherit;
+    height: 6em;
     margin-bottom: 24px;
 }
 
-.formulario-button {
-    width: calc(100% - 2 * 8px + 0.5em + 4px);
+.formulario-label input[type="button"] {
+    width: calc(100% + 1em + 2px);
     background-color: #ff7b00;
     color: white;
     border: none;
@@ -154,6 +156,7 @@ app-maps {
     }
 
     .solicitacao-image img {
+        width: auto;
         height: 80%;
     }
 
@@ -161,5 +164,10 @@ app-maps {
         display: grid;
         grid-template-rows: 25% 25% 25% 25%;
         grid-template-columns: auto;
+    }
+
+    .formulario-bottom textarea,
+    .formulario-label input[type="button"] {
+        width: 100%;
     }
 }
