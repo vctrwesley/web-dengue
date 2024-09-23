@@ -12,19 +12,19 @@
       <div class="menu-container">
         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/usuario/page-home">Home</a>
+            <a class="nav-link" routerLink="/usuario/page-home" routerLinkActive="active-link">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/usuario/page-sobre">Sobre</a>
+            <a class="nav-link" routerLink="/usuario/page-sobre" routerLinkActive="active-link">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/usuario/page-prevencao">Prevenção</a>
+            <a class="nav-link" routerLink="/usuario/page-prevencao" routerLinkActive="active-link">Prevenção</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/usuario/page-contato">Contato</a>
+            <a class="nav-link" routerLink="/usuario/page-contato" routerLinkActive="active-link">Contato</a>
           </li>
         </ul>
-        <a class="button-nav" routerLink="/usuario/page-contato">Agências</a>
+        <a class="button-nav" (click)="navigateToMaps()">Agências</a>
       </div>
     </nav>
 
