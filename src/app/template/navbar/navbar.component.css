@@ -76,6 +76,11 @@
   background: #233c4d;
 }
 
+.nav-link.active-link {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
 /* mobile menu */
 .mobile-menu {
   position: fixed;

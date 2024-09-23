@@ -1,12 +1,16 @@
 // page-contato.component.ts
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-contato',
   templateUrl: './page-contato.component.html',
   styleUrls: ['./page-contato.component.css'],
 })
-export class PageContatoComponent {
+export class PageContatoComponent implements OnInit{
+
+  constructor(private route: ActivatedRoute) {}
+  
   // Carrossel
   slides = [
     { image: 'assets/images/cards_Agentes/felipe.png' },
@@ -32,5 +36,16 @@ export class PageContatoComponent {
   updatecarrosel() {
     const carrosel = document.querySelector('.carrosel') as HTMLElement;
     carrosel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+  }
+
+  ngOnInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
   }
 }
