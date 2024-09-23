@@ -8,14 +8,13 @@ body {
 
 .hero {
   text-align: center;
-  padding: 10px;
   color: #3f4141;
 }
 
 .video-section {
   width: 100%;
-  max-width: 560px; /* Define a largura máxima para ambos */
-  margin: 0 auto; /* Centraliza os elementos */
+  max-width: 560px;
+  margin: 0 auto;
   padding: 20px;
 }
 .hero p {
@@ -43,18 +42,18 @@ body {
 
 .tips-container {
   display: grid;
-  grid-template-columns: repeat(2, auto); 
-  gap: 10px; 
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
   column-gap: 150px;
-  justify-content: center; 
+  justify-content: center;
   padding: 0 20px;
 }
 
 .tip-esq {
   position: relative;
-  width: 400px; 
+  width: 400px;
   padding: 20px;
-  background-image: url('/assets/images/page-prevencao/bg-art-1.png'); 
+  background-image: url("/assets/images/page-prevencao/bg-art-1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,7 +67,7 @@ body {
   position: relative;
   width: 400px;
   padding: 20px;
-  background-image: url('/assets/images/page-prevencao/bg-art-2.png'); 
+  background-image: url("/assets/images/page-prevencao/bg-art-2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,11 +88,11 @@ body {
   margin: 0;
 }
 
-.icon-esq{
+.icon-esq {
   transform: translateX(-50px) translateY(30px);
 }
 
-.icon-dir{
+.icon-dir {
   transform: translateX(50px) translateY(30px);
 }
 
@@ -116,7 +115,7 @@ body {
 
 .slogan h2 {
   color: var(--color-light);
-  font-size: 26px;
+  font-size: 48px;
   text-align: right;
   margin: 32px;
 }
@@ -125,48 +124,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   background-color: #3a778a;
 }
 
 .education-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
   max-width: 1200px;
-}
-
-.iframe-container {
-  width: 100%;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-.iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+  margin: 0 auto;
 }
 
 .text-content {
-  width: 100%;
-  text-align: center;
+  flex: 1;
+  max-width: 50%;
+  text-align: justify;
   color: #e8e8e8;
 }
 
-.text-content h2 {
-  margin-top: 0;
-}
-
-.text-content p {
-  margin-top: 10px;
+.education-content img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
 }
 
 .tutorials {
@@ -238,18 +219,25 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90vh;
 }
 
 .iframe-video {
   width: 100%;
-  max-width: 560px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 3vw;
+  position: relative;
+  padding-top: 30%;
 }
 
 .iframe-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   border-radius: 15px;
+  max-height: 450px;
 }
 
 /* Responsividade */
@@ -258,8 +246,31 @@ footer {
     padding: 10vw;
   }
 
+  .iframe-video {
+    max-width: 100%;
+    padding-top: 56.25%;
+  }
+
+  .iframe-video iframe {
+    border-radius: 15px;
+  }
+
   .tip {
     width: 90vw;
+  }
+
+  .slogan h2 {
+    font-size: 30px;
+    margin: 24px;
+  }
+
+  .education-content {
+    flex-direction: column;
+  }
+
+  .text-content,
+  .iframe-container {
+    max-width: 100%;
   }
 
   .prevention-tips,
