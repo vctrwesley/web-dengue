@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class PageContatoComponent implements OnInit{
+  currentSlide = 0;
 
   constructor(private route: ActivatedRoute) {}
  
