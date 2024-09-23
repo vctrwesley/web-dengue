@@ -7,35 +7,45 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './page-contato.component.html',
   styleUrls: ['./page-contato.component.css'],
 })
+
 export class PageContatoComponent implements OnInit{
+  currentSlide = 0;
 
   constructor(private route: ActivatedRoute) {}
-  
-  // Carrossel
+ 
   slides = [
-    { image: 'assets/images/cards_Agentes/felipe.png' },
-    { image: 'assets/images/cards_Agentes/felipe.png' },
-    { image: 'assets/images/cards_Agentes/felipe.png' },
-    // Adicione mais slides conforme necessário
+    {
+      nome: 'João Victor',
+      funcao: 'Pedreiro',
+      telefone: '40028922',
+      email: 'joao@email.com',
+      link_png: 'assets/images/cards_Agentes/jv.png'
+    },
+    {
+      nome: 'Maria Silva',
+      funcao: 'Agente de Endemias',
+      telefone: '999999999',
+      email: 'maria@endemias.com',
+      link_png: 'assets/images/cards_Agentes/jv.png'
+    },
+    {
+      nome: 'ronalda',
+      funcao: 'Agente de Endemias',
+      telefone: '999999999',
+      email: 'maria@endemias.com',
+      link_png: 'assets/images/cards_Agentes/jv.png'
+    }
+    // Adicione mais cards conforme necessário
   ];
 
-  currentIndex = 0;
-
+  // Função para ir para o slide anterior
   prevSlide() {
-    const totalSlides = this.slides.length;
-    this.currentIndex = (this.currentIndex - 1 + totalSlides) % totalSlides;
-    this.updatecarrosel();
+    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
   }
 
+  // Função para ir para o próximo slide
   nextSlide() {
-    const totalSlides = this.slides.length;
-    this.currentIndex = (this.currentIndex + 1) % totalSlides;
-    this.updatecarrosel();
-  }
-
-  updatecarrosel() {
-    const carrosel = document.querySelector('.carrosel') as HTMLElement;
-    carrosel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
   }
 
   ngOnInit(): void {
