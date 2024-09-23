@@ -62,7 +62,7 @@ Se você tiver alguma dúvida ou sugestão de melhoria, sinta-se à vontade para
     </a>
     </td>
     <td align="center">
-    <a href="https://github.com/exemplo">
+    <a href="https://github.com/billygrahan">
     <img style="border-radius: 50%;" src="link-para-avatar" width="100px;" alt=""/><br /><sub><b>Billy Grahan</b></sub>
     </a><br />
     <a href="" title="Linkedin">
