@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /*----------------------------------------- Localização Mapa ------------------------------*/
 
 .localizacao {
@@ -8,7 +13,7 @@
     background-color: #1a2c38;
     padding: 50px;
     gap: 50px;
-    height: 60vh;
+    height: 480px;
     z-index: -1;
 }
 
@@ -41,7 +46,7 @@ app-maps {
     position: relative;
     background-color: #3a778a;
     padding: 20px;
-    height: 65vh;
+    height: 512px;
     z-index: 0;
 }
 
@@ -72,11 +77,12 @@ app-cards {
     margin: auto;
     transition: transform 0.3s ease;
     transform: translateX(-75%);
-        /* Move o card 20px para a direita */
+    /* Move o card 20px para a direita */
 }
 
 /*------------------------------------ formulario de solicitação -------------------------------------------*/
 .solicitacao-container * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -91,7 +97,7 @@ app-cards {
 }
 
 .solicitacao-container {
-    height: 720px;
+    height: 640px;
     background-color: #e8e8e8;
 
     display: grid;
@@ -116,7 +122,7 @@ app-cards {
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
-    grid-column-gap: 1em;
+    grid-column-gap: 16px;
 }
 
 .formulario-bottom {
@@ -126,7 +132,7 @@ app-cards {
 .formulario-label input[type="text"],
 .formulario-label textarea {
     padding: 8px;
-    margin: 0.25em 0;
+    margin: 8px 0;
     border: 1px solid black;
     border-radius: 4px;
     width: 100%;
@@ -135,8 +141,8 @@ app-cards {
 .formulario-bottom textarea {
     width: calc(100% + 1em);
     font-family: inherit;
-    height: 6em;
-    margin-bottom: 16px;
+    height: 96px;
+    margin-bottom: 24px;
 }
 
 .formulario-label input[type="button"] {
@@ -155,7 +161,7 @@ app-cards {
 }
 
 .solicitacao-image img {
-    width: 67%;
+    width: 60%;
     margin: auto;
 }
 

@@ -6,34 +6,58 @@
         <div class="formulario-header">
             <h1>Solicitação de visita</h1>
             <p>
-                Solicite aqui a visita de um agente de endemias ao seu domicílio
+                Solicite aqui a visita de um agente de endemias ao seu
+                domicílio.
             </p>
         </div>
         <label for="formulario" class="formulario-label">
             <div class="formulario-top">
                 <div>
                     Nome<br />
-                    <input type="text" placeholder="Digite seu nome" id="formulario-nome" />
+                    <input
+                        type="text"
+                        placeholder="Digite seu nome"
+                        id="formulario-nome"
+                    />
                 </div>
                 <div>
                     Email<br />
-                    <input type="text" placeholder="Digite seu e-mail" id="formulario-email" />
+                    <input
+                        type="text"
+                        placeholder="Digite seu e-mail"
+                        id="formulario-email"
+                    />
                 </div>
                 <div>
                     Endereço<br />
-                    <input type="text" placeholder="Digite seu endereço" id="formulario-endereco" />
+                    <input
+                        type="text"
+                        placeholder="Digite seu endereço"
+                        id="formulario-endereco"
+                    />
                 </div>
                 <div>
                     CEP<br />
-                    <input type="text" placeholder="Digite seu CEP" id="formulario-cep" />
+                    <input
+                        type="text"
+                        placeholder="Digite seu CEP"
+                        id="formulario-cep"
+                    />
                 </div>
             </div>
             <div class="formulario-bottom">
                 <div>
                     Assunto<br />
-                    <textarea placeholder="Digite o motivo da solicitação" id="formulario-assunto"></textarea>
+                    <textarea
+                        placeholder="Digite o motivo da solicitação"
+                        id="formulario-assunto"
+                    ></textarea>
                 </div>
-                <input type="button" value="Solicitar Visita" id="formulario-button" />
+                <input
+                    type="button"
+                    value="Solicitar Visita"
+                    id="formulario-button"
+                />
             </div>
         </label>
     </div>
@@ -48,16 +72,19 @@
         &#10094;
     </button>
 
-    <app-cards [nome]="slides[currentSlide].nome" [funcao]="slides[currentSlide].funcao"
-        [telefone]="slides[currentSlide].telefone" [email]="slides[currentSlide].email"
-        [link_png]="slides[currentSlide].link_png">
+    <app-cards
+        [nome]="slides[currentSlide].nome"
+        [funcao]="slides[currentSlide].funcao"
+        [telefone]="slides[currentSlide].telefone"
+        [email]="slides[currentSlide].email"
+        [link_png]="slides[currentSlide].link_png"
+    >
     </app-cards>
 
     <button class="carrosel-control next" (click)="nextSlide()">
         &#10095;
     </button>
 </section>
-
 
 <section class="localizacao" id="maps">
     <h1>Agências Próximas de Você</h1>
