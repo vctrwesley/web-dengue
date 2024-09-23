@@ -1,0 +1,18 @@
+<google-map
+  *ngIf="googleMapsLoaded"
+  [center]="center"
+  [zoom]="zoom"
+  [options]="options"
+  [width]="height"
+  [height]="width"
+  mapId="map-agencias"
+>
+  <map-advanced-marker
+    *ngFor="let marker of markers"
+    [position]="marker.position"
+    [label]="marker.label"
+    [title]="marker.title"
+    [icon]="marker.icon"
+  >
+  </map-advanced-marker>
+</google-map>

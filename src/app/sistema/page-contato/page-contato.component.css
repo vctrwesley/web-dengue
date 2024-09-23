@@ -1,0 +1,132 @@
+/*----------------------------------------- Localização Mapa ------------------------------*/
+
+.localizacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a2c38;
+    padding: 50px;
+    gap: 50px;
+    height: 60vh;
+}
+
+.localizacao h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin: 0;
+}
+
+app-maps {
+    width: 90%;
+    height: 600px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/*----------------------------------------- Carrosel Agentes ------------------------------*/
+.carrosel-container {
+    height: 65vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a778a;
+}
+
+.solicitacao-image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.solicitacao-image img {
+    width: 67%;
+}
+
+/*------------------------------------ formulario de solicitação -------------------------------------------*/
+
+.solicitacao-container {
+    height: 720px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: 40% 40%; */
+    /* grid-template-columns: auto; */
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-header,
+.formulario-label {
+    width: 50%;
+}
+
+.formulario-top {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.formulario-top-left,
+.formulario-top-right {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: auto;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 4px;
+}
+
+.formulario-bottom {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-label input {
+    padding: 8px;
+
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.formulario-top input {
+    width: 16em;
+}
+
+.formulario-bottom input {
+    width: calc(32em + 2 * 2 * 8px - 4px);
+    height: 4em;
+    margin-bottom: 1em;
+}
+
+.formulario-button {
+    width: calc(32em + 2 * 2 * 8px + 14px);
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+}

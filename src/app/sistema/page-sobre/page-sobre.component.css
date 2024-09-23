@@ -168,7 +168,6 @@
     margin: 0;
 }
 
-
 .img-diagnostico img {
     height: auto;
     width: 100%;
@@ -314,7 +313,6 @@
         flex-direction: column;
         gap: 50px;
     }
-
 }
 
 @media screen and (max-width: 768px) {

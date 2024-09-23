@@ -70,10 +70,10 @@ Se você tiver alguma dúvida ou sugestão de melhoria, sinta-se à vontade para
     </a>
     </td>
     <td align="center">
-    <a href="https://github.com/exemplo">
-    <img style="border-radius: 50%;" src="link-para-avatar" width="100px;" alt=""/><br /><sub><b>...</b></sub>
+    <a href="https://github.com/pedrog14">
+    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52004811?v=4" width="100px;" alt=""/><br /><sub><b>Pedro Gabriel</b></sub>
     </a><br />
-    <a href="" title="Linkedin">
+    <a href="https://www.linkedin.com/in/pedrog14/" title="Linkedin">
     <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
     </td>
