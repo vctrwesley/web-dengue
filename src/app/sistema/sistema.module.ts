@@ -7,6 +7,8 @@ import { PageSobreComponent } from './page-sobre/page-sobre.component';
 import { PagePrevencaoComponent } from './page-prevencao/page-prevencao.component';
 import { PageContatoComponent } from './page-contato/page-contato.component';
 import { SharedModule } from '../shared/shared.module';
+import { PageTermosDeUsoComponent } from './page-termos-de-uso/page-termos-de-uso.component';
+import { PagePoliticaDePrivacidadeComponent } from './page-politica-de-privacidade/page-politica-de-privacidade.component';
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { SharedModule } from '../shared/shared.module';
     PageSobreComponent,
     PagePrevencaoComponent,
     PageContatoComponent,
+    PageTermosDeUsoComponent,
+    PagePoliticaDePrivacidadeComponent,
   ],
   imports: [
     CommonModule,

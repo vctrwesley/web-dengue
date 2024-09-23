@@ -36,7 +36,7 @@
 }
 
 .footer-logo img {
-  width: 120px;
+  width: 100px;
 }
 
 .links-container {
@@ -134,8 +134,8 @@
   .links-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-
+    gap: 50px;
+    column-gap: 20px;
   }
 
   .footer-logo {
@@ -148,6 +148,6 @@
   }
 
   .footer-copyright span {
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 }

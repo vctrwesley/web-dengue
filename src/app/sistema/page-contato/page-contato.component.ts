@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+// page-contato.component.ts
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-contato',
   templateUrl: './page-contato.component.html',
   styleUrls: ['./page-contato.component.css'],
 })
-export class PageContatoComponent {
-  currentSlide = 0;  // Índice do slide atual
+
+export class PageContatoComponent implements OnInit{
+
+  constructor(private route: ActivatedRoute) {}
+ 
   slides = [
     {
       nome: 'João Victor',
@@ -40,5 +45,16 @@ export class PageContatoComponent {
   // Função para ir para o próximo slide
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+  }
+
+  ngOnInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
   }
 }
