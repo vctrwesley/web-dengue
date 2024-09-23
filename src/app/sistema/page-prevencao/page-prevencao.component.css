@@ -1,0 +1,339 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  text-align: center;
+  color: #3f4141;
+}
+
+.video-section {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.hero p {
+  text-align: justify;
+}
+
+.video-section iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.prevention-tips {
+  background-color: rgba(255, 118, 30, 15%);
+  color: white;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.prevention-tips h2 {
+  background: linear-gradient(to bottom, #b55417, #ff761e);
+  padding: 40px 40px;
+  font-size: 32px;
+  color: #e8e8e8;
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  column-gap: 150px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.tip-esq {
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  background-image: url("/assets/images/page-prevencao/bg-art-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+}
+
+.tip-dir {
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  background-image: url("/assets/images/page-prevencao/bg-art-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+}
+
+.tip-esq img,
+.tip-dir img {
+  width: 100px;
+  height: 100px;
+}
+
+.tip-dir p,
+.tip-esq p {
+  margin: 0;
+}
+
+.icon-esq {
+  transform: translateX(-50px) translateY(30px);
+}
+
+.icon-dir {
+  transform: translateX(50px) translateY(30px);
+}
+
+.banner-content-slogan {
+  width: 100%;
+  height: 35vh;
+  background-image: url("/assets/images/page-prevencao/slogan.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slogan {
+  display: flex;
+  text-align: center;
+}
+
+.slogan h2 {
+  color: var(--color-light);
+  font-size: 48px;
+  text-align: right;
+  margin: 32px;
+}
+
+.educational-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3a778a;
+  padding: 4vw;
+}
+
+.education-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+  text-align: justify;
+  color: #e8e8e8;
+}
+
+.education-content img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.tutorials {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.tutorials h2 {
+  text-align: center;
+}
+
+.tutorials-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #ededed;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #0077a3;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 560px;
+  max-height: 315px;
+}
+
+.init-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.iframe-video {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 30%;
+}
+
+.iframe-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  max-height: 450px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero {
+    padding: 10vw;
+  }
+
+  .iframe-video {
+    max-width: 100%;
+    padding-top: 56.25%;
+  }
+
+  .iframe-video iframe {
+    border-radius: 15px;
+  }
+
+  .tip {
+    width: 90vw;
+  }
+
+  .slogan h2 {
+    font-size: 30px;
+    margin: 24px;
+  }
+
+  .education-content {
+    flex-direction: column;
+  }
+
+  .text-content,
+  .iframe-container {
+    max-width: 100%;
+  }
+
+  .prevention-tips,
+  .tutorials {
+    padding: 10vw 5vw;
+  }
+
+  .swiper-slide iframe {
+    max-width: 100%;
+    max-height: 200px;
+  }
+}
+
+.tutorials {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+#slider-container {
+  width: 85vw;
+  max-width: 1400px;
+  position: relative;
+  overflow: hidden;
+}
+
+#slider-container .btn {
+  position: absolute;
+  top: calc(50% - 20px);
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.left-btn {
+  left: 10px;
+  border-left: 8px solid #fff;
+  border-top: 8px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.right-btn {
+  right: 10px;
+  border-left: 8px solid #fff;
+  border-top: 8px solid #fff;
+  transform: rotate(135deg);
+}
+
+#slider {
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.slide {
+  min-width: calc(25% - 10px);
+  margin: 10px;
+  flex-shrink: 0;
+}
+
+.slide iframe {
+  width: 100%;
+  height: 100%;
+}
