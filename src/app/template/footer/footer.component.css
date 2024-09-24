@@ -37,6 +37,12 @@
 
 .footer-logo img {
   width: 100px;
+  border-radius: 50%;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .links-container {
@@ -80,7 +86,11 @@
   color: var(--color-dark);
   font-size: 16px;
   text-decoration: none;
+}
 
+.footer-links a:hover {
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
 }
 
 .footer-links img:hover {
