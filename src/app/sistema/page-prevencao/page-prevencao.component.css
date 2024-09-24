@@ -96,6 +96,48 @@ body {
   transform: translateX(50px) translateY(30px);
 }
 
+@media screen and (max-width: 1024px) {
+  .tips-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .prevention-tips{
+    padding-top: 10px;
+  }
+
+  .tip-esq, .tip-dir {
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start; 
+    min-height: 100px; 
+    padding: 15px; 
+    max-width: 89%; 
+  }
+
+  .tip-esq img{
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+
+  .tip-dir img{
+    width: 70px;
+    height: 70px;
+    margin-left: 40px;
+  }
+
+  .icon-esq, .icon-dir {
+    transform: none;
+  }
+
+  .tip-esq p, .tip-dir p {
+    font-size: 16px; 
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
 .banner-content-slogan {
   width: 100%;
   height: 35vh;
@@ -274,7 +316,6 @@ footer {
     max-width: 100%;
   }
 
-  .prevention-tips,
   .tutorials {
     padding: 10vw 5vw;
   }
