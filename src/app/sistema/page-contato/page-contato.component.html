@@ -68,22 +68,25 @@
 
 <!-- Profissionais e Agentes-->
 <section class="carrosel-container">
-    <button class="carrosel-control prev" (click)="prevSlide()">
-        &#10094;
-    </button>
-
-    <app-cards
-        [nome]="slides[currentSlide].nome"
-        [funcao]="slides[currentSlide].funcao"
-        [telefone]="slides[currentSlide].telefone"
-        [email]="slides[currentSlide].email"
-        [link_png]="slides[currentSlide].link_png"
-    >
-    </app-cards>
-
-    <button class="carrosel-control next" (click)="nextSlide()">
-        &#10095;
-    </button>
+    <h1>Profissionais/Agentes</h1>
+    <div class="carousel" #carousel>
+        <div class="carousel-item" *ngFor="let card of cards" [class.active]="card === cards[currentIndex]">
+            <app-cards 
+            [nome]="card.nome" 
+            [funcao]="card.funcao" 
+            [telefone]="card.telefone" 
+            [email]="card.email"
+            [link_png]="card.link_png">
+            </app-cards>
+        </div>
+    </div>
+    <div class="controls">
+        <button class="prev" (click)="scrollLeft()">‹</button>
+        <div class="indicators">
+            <span *ngFor="let card of cards; let i = index" [class.active]="i === currentIndex" (click)="goToSlide(i)"></span>
+        </div>
+        <button class="next" (click)="scrollRight()">›</button>
+    </div>
 </section>
 
 <section class="localizacao" id="maps">

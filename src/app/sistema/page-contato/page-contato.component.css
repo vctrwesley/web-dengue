@@ -38,43 +38,100 @@ app-maps {
 
 /*----------------------------------------- Carrosel Agentes ------------------------------*/
 .carrosel-container {
+    height: 75vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a778a;
+    overflow: hidden;
+}
+
+.carrosel-container h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    background-color: #3a778a;
-    padding: 20px;
-    height: 512px;
-    z-index: 0;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin: 0;
 }
 
-.carrosel-control {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+.carousel {
+    display: flex;
+    /* Garante que os itens sejam posicionados lado a lado */
+    justify-content: center;
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    transition: transform 1.5s ease;
+    position: relative;
+}
+
+.carousel-item {
+    flex: 0 0;
+    /* Garante que os itens não colapsem */
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos dos botões de navegação */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prev,
+.next {
+    background-color: transparent;
+    color: var(--color-light);
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 2em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
+    margin: 0 14px;
+    font-size: 32px;
 }
 
-.carrosel-control.prev {
-    left: 10px;
+.indicators {
+    display: flex;
+    gap: 6px;
 }
 
-.carrosel-control.next {
-    right: 10px;
+.indicators span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-app-cards {
-    width: 300px;
-    max-width: 100%;
-    margin: auto;
-    transition: transform 0.3s ease;
-    transform: translateX(-75%);
+.indicators span.active {
+    background: var(--color-light);
+}
+
+@media screen and (max-width: 500px) {
+    .carrosel-container{
+        height: 45vh;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 750px) {
+    .carrosel-container {
+            height: 60vh;
+        }
 }
 
 /*------------------------------------ formulario de solicitação -------------------------------------------*/
