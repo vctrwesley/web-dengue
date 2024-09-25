@@ -13,8 +13,7 @@
     background-color: #1a2c38;
     padding: 50px;
     gap: 50px;
-    height: 60vh;
-    z-index: -1;
+    min-height: 100vh;
 }
 
 .localizacao h1 {
@@ -38,7 +37,7 @@ app-maps {
 
 /*----------------------------------------- Carrosel Agentes ------------------------------*/
 .carrosel-container {
-    height: 75vh;
+    min-height: 90vh;
     display: grid;
     justify-content: center;
     align-items: center;
