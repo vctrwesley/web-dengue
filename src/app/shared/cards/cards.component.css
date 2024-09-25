@@ -51,38 +51,36 @@ color: #333;
 
 @media screen and (max-width: 500px) {
     .Card{
-        padding: 10px; /*bordas*/
-        width: 35ch; /*largura*/
-        column-gap: 1px; /*distancia entre os elementos*/
+        padding: 10px; 
+        width: 35ch; 
         height: auto;
         margin: auto;
     }
     .divisoria{
-        height: 70%; /*tamanho da linha*/
+        height: 70%; 
     }
     .foto img{
-        /*altura e largura da imagem*/
+        
         width: 10ch;
         height: 10ch;
     }
     .dados p {
-        margin: 6px 0; /*distancia entre as linhas*/
-        font-size: 0.8em; /*tamanho dos caracteres*/
+        margin: 6px 0; 
+        font-size: 0.8em; 
     }
 }
+
 
 @media screen and (min-width: 501px) and (max-width: 750px) {
     .Card {
         padding: 30px;
         width: 50ch;
-        column-gap: 1px;
         height: auto;
         margin: auto;
     }
 
     .divisoria {
         height: 80%;
-        /* tamanho da linha */
     }
 
     .foto img {
