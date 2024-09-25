@@ -1,29 +1,135 @@
-import { Component } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    AfterViewInit,
+    ViewChild,
+    ElementRef,
+    HostListener,
+} from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-page-prevencao',
-  templateUrl: './page-prevencao.component.html',
-  styleUrls: ['./page-prevencao.component.css'],
+    selector: 'app-page-prevencao',
+    templateUrl: './page-prevencao.component.html',
+    styleUrls: ['./page-prevencao.component.css'],
 })
-export class PagePrevencaoComponent {
-  currentMargin = 0; // margem inicial
+export class PagePrevencaoComponent implements OnInit, AfterViewInit {
+    @ViewChild('carousel') carousel!: ElementRef;
+    currentIndex: number = 0;
+    itemWidth: number = 450;
 
-  // Defina URLs diretamente no HTML, não é necessário incluir aqui
+    videos: { url: SafeResourceUrl }[] = [];
 
-  slideRight() {
-    const slideWidth = 25; // porcentagem do slide
-    const maxMargin = -(100 - slideWidth); // margem máxima negativa
+    constructor(private sanitizer: DomSanitizer) {}
 
-    if (this.currentMargin > maxMargin) {
-      this.currentMargin -= slideWidth;
+    ngOnInit(): void {
+        this.videos = [
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/NWvkpEg1TN0'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/PxFSnK8EYLE'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/dQw4w9WgXcQ'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/MaucSdm7aUU'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/ywr1y2h1NQI'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/yn2Ii2kPoZo'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/KvAoTrVqarU'
+                ),
+            },
+            {
+                url: this.sanitizer.bypassSecurityTrustResourceUrl(
+                    'https://www.youtube.com/embed/ZKFGPtb8IPk'
+                ),
+            },
+        ];
     }
-  }
 
-  slideLeft() {
-    const slideWidth = 25; // porcentagem do slide
-
-    if (this.currentMargin < 0) {
-      this.currentMargin += slideWidth;
+    ngAfterViewInit(): void {
+        this.updateCarousel();
+        this.startAutoplay();
+        this.adjustItemWidth();
     }
-  }
+
+    @HostListener('window:resize', ['$event'])
+    onResize() {
+        this.adjustItemWidth();
+        this.updateCarousel();
+    }
+
+    adjustItemWidth() {
+        const containerWidth = window.innerWidth;
+        if (containerWidth < 768) {
+            this.itemWidth = 350;
+        } else if (containerWidth < 1024) {
+            this.itemWidth = 400;
+        } else {
+            this.itemWidth = 450;
+        }
+    }
+
+    scrollLeft() {
+        this.currentIndex =
+            (this.currentIndex - 1 + this.videos.length) % this.videos.length;
+        this.updateCarousel();
+    }
+
+    scrollRight() {
+        this.currentIndex = (this.currentIndex + 1) % this.videos.length;
+        this.updateCarousel();
+    }
+
+    goToSlide(index: number) {
+        this.currentIndex = index;
+        this.updateCarousel();
+    }
+
+    startAutoplay() {
+        setInterval(() => {
+            this.scrollRight();
+        }, 8000);
+    }
+
+    updateCarousel() {
+        const carouselElement = this.carousel.nativeElement;
+        const itemWidth =
+            carouselElement.querySelector('.carousel-item').clientWidth;
+        const containerWidth = carouselElement.offsetWidth;
+        let offset =
+            containerWidth / 2 -
+            itemWidth / 2 -
+            this.currentIndex * (itemWidth + 20);
+
+        if (window.innerWidth <= 768) {
+            offset =
+                containerWidth / 2 -
+                itemWidth / 2 -
+                this.currentIndex * (itemWidth + 20) +
+                1020;
+        }
+
+        carouselElement.style.transform = `translateX(${offset}px)`;
+    }
 }
