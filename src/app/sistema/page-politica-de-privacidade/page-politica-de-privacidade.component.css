@@ -1,4 +1,4 @@
-.politica-de-privacidade{
+.politica-de-privacidade {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,11 +8,11 @@
 
 .topico-PP,
 .topico-PP2,
-.dataPP{
+.data-PP {
     width: 60%;
 }
 
-.topico-PP{
+.topico-PP {
     color: var(--color-dark);
     font-size: 16px;
     font-weight: 400;
@@ -20,12 +20,12 @@
     margin: 0;
 }
 
-.dataPP{
+.data-PP {
     text-align: end;
 }
 
 @media screen and (max-width: 960px) {
-    .politica-de-privacidade{
+    .politica-de-privacidade {
         flex-direction: column;
         gap: 16px;
         padding: 24px;
@@ -33,7 +33,7 @@
 
     .topico-PP,
     .topico-PP2,
-    .dataPP {
+    .data-PP {
         width: 90%;
     }
 }
